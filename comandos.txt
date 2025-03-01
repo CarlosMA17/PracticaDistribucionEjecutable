@@ -1,0 +1,20 @@
+# Para crear ejecutables en Windows y Linux a partir de tu aplicación PyQt
+
+# 1. Instalar pyinstaller si no lo tienes
+pip install pyinstaller
+
+# 2. Compilar para Windows
+# En Windows, abre PowerShell o CMD en el directorio del proyecto
+pyinstaller --noconsole --onefile --name practicaExeWin practicaExe.py --add-data "imagenes;imagenes"
+
+# 3. Compilar para Linux
+# En Linux, abre la terminal en el directorio del proyecto
+pyinstaller --noconsole --onefile --name practicaExeLinux practicaExe.py --add-data "imagenes:imagenes"
+
+# Notas:
+# - La opción --noconsole oculta la consola en aplicaciones gráficas.
+# - --onefile crea un solo archivo ejecutable.
+# - --add-data incluye la carpeta de imágenes, usando ";" en Windows y ":" en Linux.
+
+# 4. Verificar la carpeta "dist"
+# En ambos sistemas, el ejecutable se encontrará en la carpeta "dist".
